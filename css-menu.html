@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+ul ul ul{
+  top: 50%;
+  left: 100%;
+}
+.menu li {
+  position: relative;
+  background-color: grey;
+  color: white;
+}
+.menu li:hover {
+  background-color: black;
+  border: solid black;
+}
+.menu > li {
+  display: inline-block;
+}
+.menu ul {
+  display: none;
+  position: absolute;
+}
+li:hover > ul {
+  display: block;
+}
+
+  </style>
+</head>
+<body>
+<ul class="menu">
+  <li>Work
+  <ul>
+    <li>Google</li>
+    <li>Apple</li>
+    <li>Facebook</li>
+  </ul>
+    </li>
+  <li>Study
+  <ul>
+    <li>C++</li>
+    <li>Java</li>
+    <li>Python</li>
+  </ul>
+    </li>
+  <li>Relex
+  <ul>
+    <li>Sleep</li>
+    <li>Game
+    <ul>
+      <li>LOL</li>
+    </ul>
+      </li>
+    <li>Eat</li>
+    </li>
+  </ul>
+</ul>
+</body>
+</html>
