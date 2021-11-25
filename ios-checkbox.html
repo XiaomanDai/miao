@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    label {
+      display: inline-block;
+      width: 200px;
+      height: 100px;
+      border-radius: 200px;
+      border: 1px solid grey;
+      background-color: rgb(226, 223, 223);
+      position: relative;
+      transition: 1s;
+      box-sizing: border-box;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+    input:checked + label {
+    background-color: rgb(47, 204, 55);
+    }
+    label::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 98px;
+      width: 98px;
+      background-color: #fff;
+      transition: 1s;
+      border-radius: 48px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+    input:checked + label::before {
+      transform: translateX(100px);
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <input type="checkbox" id="ios" hidden>
+    <label for="ios"></label>
+  </div>
+</body>
+</html>
