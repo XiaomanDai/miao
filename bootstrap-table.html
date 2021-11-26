@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<meta name="robots" content="noindex">
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style type="text/less">
+    .table {
+  width: 100%;
+  border-collapse: collapse;
+  thead {
+    border-bottom: 2px solid #212529;
+  }
+  tr {
+    border-bottom: 1px solid #dee2e6;
+  }
+  td, th {
+    padding: .5em;
+    text-align: left;
+  }
+  &.table-striped {
+    tbody tr:nth-child(odd) {
+      background-color: #f2f2f2;
+    }
+  }
+  &.table-hover {
+    tbody tr:hover {
+      background-color: #ECECEC;
+    }
+  }
+  &.table-bordered {
+    td, th {
+      border: 1px solid #DEE2E6;
+    }
+  }
+  &.table-borderless {
+    thead, tr {
+      border: none;
+    }
+  }
+  &.table-small {
+    th, td {
+      padding: .25em;
+    }
+  }
+  &.table-dark {
+    background-color: #212529;
+    color: white;
+    thead {
+      border-bottom-color: white;
+    }
+    tr {
+      border-bottom-color: #373B3E;
+    }
+    &.table-striped {
+      tbody tr:nth-child(odd) {
+        background-color: #2C3034;
+      }
+    }
+    &.table-hover {
+      tbody tr:hover {
+        background-color: #323539;
+      }
+    }
+    &.table-bordered {
+      td, th {
+        border-color: #373B3E;
+      }
+    }
+  }
+}
+</style>
+</head>
+
+<body>
+  <table class="table table-striped table-hover table-bordered xtable-borderless xtable-small table-dark ">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+      <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
+    </tbody>
+  </table>
+</body>
+
+</html>
