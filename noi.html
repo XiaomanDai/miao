@@ -538,9 +538,9 @@
     var Au = Number(prompt())
     var Ag = Number(prompt())
     var Cu = Number(prompt())
-    AuAll = AuAll + 1
-    AgAll = AgAll + 1
-    CuAll = CuAll + 1
+    AuAll = AuAll + Au
+    AgAll = AgAll + Ag
+    CuAll = CuAll + Cu
     counter = counter + 1
   }
   var all = AuAll + AgAll + CuAll
@@ -560,8 +560,8 @@
 </script>
 
 <script id='ch0105/09'>
-  var n = Number(prompt())
-  var m = Number(prompt())
+    var m = Number(prompt())
+    var n = Number(prompt())
   if (m % 2 == 0) {
     m = m + 1
   }
@@ -575,8 +575,8 @@
 </script>
 
 <script id='ch0105/10'>
-  var n = Number(prompt())
-  var m = Number(prompt())
+    var m = Number(prompt())
+    var n = Number(prompt())
   if (m % 17 !== 0) {
     m = m + (17 - m % 17)
   }
@@ -616,7 +616,7 @@
   sum = 0
   while (count < N) {
     var x = Number(prompt())
-    if (x = m) {
+    if (x == m) {
       sum = sum + 1
     }
     count = count + 1
@@ -625,8 +625,8 @@
 </script>
 
 <script id='ch0105/13'>
-  var n = Number(prompt())
-  var a = Number(prompt())
+    var a = Number(prompt())
+    var n = Number(prompt())
   var result = 1
   for (var i = 0; i < n; i++) {
     result *= a
@@ -635,8 +635,8 @@
 </script>
 
 <script id='ch0105/14'>
-  var n = Number(prompt())
-  var x = Number(prompt())
+    var x = Number(prompt())
+    var n = Number(prompt())
   for (var i = 0; i < n; i++) {
     x = x * (1 + 0.001)
   }
@@ -658,7 +658,7 @@
   var N = Number(prompt())
   var K = Number(prompt())
   var sum = 0
-  var price = 0
+    var price = 200
   var buy = false
   for (var i = 1; i <= 20; i++) {
     sum += N
