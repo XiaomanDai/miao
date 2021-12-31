@@ -944,7 +944,7 @@
   var n = Number(prompt())
     var sum = 0
     var sign = 1
-    for (var i = 0; i < n; i++) {
+      for (var i = 1; i <= n; i++) {
       sum += sign * 1 / i
       sign = -sign
     }
@@ -977,13 +977,15 @@
     var sum = 0
     for (var i = 1; i <= n; i++) {
       sum += v
-      v = v * x
+      v *= x
     }
     console.log(sum.toFixed(2))
 </script>
+
 <script id='ch0105/37'>
   var n = Number(prompt())
 </script>
+
 <script id='ch0105/38'>
   var m = Number(prompt())
   for (var i = 0; i < m; i++) {
@@ -1076,7 +1078,7 @@
   }
   midLine += char
   var result = edgeLine + '\n'
-  for (var i = 0; i < h; i++) {
+    for (var i = 0; i < h - 2; i++) {
     result += midLine + '\n'
   }
   result += edgeLine
