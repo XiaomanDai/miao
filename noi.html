@@ -912,7 +912,7 @@
     var light = true
     for (var j = 1; j <= M && j <= i; j++) {
       if (i % j == 0) {
-        light = false
+        light = !light
       }
     }
     if (!light) {
@@ -932,6 +932,7 @@
   var n = Number(prompt())
     var p = 1
     var q = 2
+    var sum = 0
     for (var i = 0; i < n; i++) {
       sum += q / p
       var t = q + p
@@ -940,6 +941,7 @@
     }
     console.log(sum.toFixed(4))
 </script>
+
 <script id='ch0105/33'>
   var n = Number(prompt())
     var sum = 0
@@ -950,6 +952,7 @@
     }
     console.log(sum.toFixed(4))
 </script>
+
 <script id='ch0105/34'>
   var n = Number(prompt())
     var sum = 0
@@ -975,7 +978,7 @@
   var n = Number(prompt())
     var v = 1
     var sum = 0
-    for (var i = 1; i <= n; i++) {
+      for (var i = 0; i <= n; i++) {
       sum += v
       v *= x
     }
