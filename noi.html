@@ -1136,3 +1136,279 @@
     }
     console.log(sum)
 </script>
+
+<script id="narcissistic">
+  function digitwidth(m) {
+    var width = 0
+    do {
+      width++
+      var digit = m % 10
+      m = (m - digit) / 10
+    } while (m > 0)
+    return width
+  }
+  function power(x, n) {
+    var result = 1
+    for (var i = 0; i < n; i++) {
+      result *= x
+    }
+    return result
+  }
+  function isNarcissistic(n) {
+    var w = digitwidth(n)
+    m = n
+    var sum = 0
+    while (m > 0) {
+      var digit = m % 10
+      sum += power(digit, w)
+      m = (m - digit) / 10
+    }
+    return sum == n
+  }
+  var n = Number(prompt())
+  console.log(isNarcissistic(n) ? 'YES' : 'NO')
+</script>
+
+<script id="narcissistics">
+  function digitwidth(m) {
+    var width = 0
+    do {
+      width++
+      var digit = m % 10
+      m = (m - digit) / 10
+    } while (m > 0)
+    return width
+  }
+  function power(x, n) {
+    var result = 1
+    for (var i = 0; i < n; i++) {
+      result *= x
+    }
+    return result
+  }
+  function isNarcissistic(n) {
+    var w = digitwidth(n)
+    m = n
+    var sum = 0
+    while (m > 0) {
+      var digit = m % 10
+      sum += power(digit, w)
+      m = (m - digit) / 10
+    }
+    return sum == n
+  }
+  for (var i = 1; i <= 10000; i++) {
+    if (isNarcissistic(i)) {
+      console.log(i)
+    }
+  }
+</script>
+
+<script id="palindrom">
+  function isPalindrom(n) {
+    var m = n
+    var reverse = 0
+    while (m > 0) {
+      var digit = m % 10
+      m = (m - digit) / 10
+      reverse = reverse * 10 + digit
+    }
+    return reverse == n
+  }
+  // function digitwidth(m) {
+  //   var width = 0
+  //   do {
+  //     width++
+  //     var digit = m % 10
+  //     m = (m - digit) / 10
+  //   } while (m > 0)
+  //   return width
+  // }
+  // function isPalindrom2(n) {
+  //   var width = digitwidth(n)
+  //   for (var i = 1; i <= width / 2; i++) {
+  //     var right = Math.trunc(n / Math.pow(10, i - 1)) % 10
+  //     var j = width - i + 1
+  //     var left = Math.trunc(n / Math.pow(10, j - 1)) % 10
+  //     if (right != left) {
+  //       return false
+  //     }
+  //   }
+  //   return true
+  // }
+</script>
+
+<script id="complete-number">
+  function isCompleteNumber(n) {
+    var sum = 0
+    for (var i = 1; i <= n / 2; i++) {
+      if (n % i == 0) {
+        sum += i
+      }
+    }
+    return sum == n
+  }
+</script>
+
+<script id="complete-numbers">
+  function isCompleteNumber(n) {
+    var sum = 0
+    for (var i = 1; i <= n / 2; i++) {
+      if (n % i == 0) {
+        sum += i
+      }
+    }
+    return sum == n
+  }
+  for (var i = 1; i < 1000; i++) {
+    if (isCompleteNumber(i)) {
+      console.log(i)
+    }
+  }
+</script>
+
+<script id="prime">
+  function isPrime(n) {
+    for (var i = 2; i * i <= n; i++) {
+      if (n % i == 0) {
+        return false
+      }
+    }
+    return true
+  }
+</script>
+
+<script id="primes">
+  function isPrime(n) {
+    for (var i = 2; i * i <= n; i++) {
+      if (n % i == 0) {
+        return false
+      }
+    }
+    return true
+  }
+  for (var i = 1; i < 100; i++) {
+    if (isPrime(i)) {
+      console.log(i)
+    }
+  }
+</script>
+
+<script id="itoa">
+  function digitToChar(n) {
+    if (n == 0) {
+      return '0'
+    }
+    if (n == 1) {
+      return '1'
+    }
+    if (n == 2) {
+      return '2'
+    }
+    if (n == 3) {
+      return '3'
+    }
+    if (n == 4) {
+      return '4'
+    }
+    if (n == 5) {
+      return '5'
+    }
+    if (n == 6) {
+      return '6'
+    }
+    if (n == 7) {
+      return '7'
+    }
+    if (n == 8) {
+      return '8'
+    }
+    if (n == 9) {
+      return '9'
+    }
+  }
+  function itoa(n) {
+    var result = ''
+    while (n > 0) {
+      var d = n % 10
+      result = digitToChar(d) + result
+      n = (n - d) / 10
+    }
+    return result
+  }
+</script>
+
+<script id="sqrt">
+  function sqrt(n) {
+    var left = 0
+    var right = n
+    do {
+      var mid = (left + right) / 2
+      if (mid * mid < n) {
+        left = mid
+      } else if (mid * mid > n) {
+        right = mid
+      } else {
+        return mid
+      }
+    } while (Math.abs(mid * mid - n) > 0.0000001)
+    return mid.toFixed(3)
+  }
+  // function sqrt(n) {
+  //   var x = n
+  //   while (Math.abs(x * x - n) > 0.00000001) {
+  //     x = x / 2 + n / 2 / x
+  //   }
+  //   return x
+  // } 牛顿法
+</script>
+
+<script id="weekday">
+  function isLeapYear(n) {
+    if (n % 400 == 0) {
+      return true
+    }
+    if (n % 100 == 0) {
+      return false
+    }
+    if (n % 4 == 0) {
+      return true
+    }
+    return false
+  }
+  function getMonthDay(year, month) {
+    switch (month) {
+      case 1:
+      case 3:
+      case 5:
+      case 7:
+      case 8:
+      case 10:
+      case 12:
+        return 31
+      case 2:
+        if (isLeapYear) {
+          return 29
+        } else {
+          return 28
+        }
+      default:
+        return 30
+    }
+  }
+  function weekday(year, month) {
+    var day = 0
+    for (var y = 1; y < year; y++) {
+      if (isLeapYear(y)) {
+        day += 366
+      } else {
+        day += 365
+      }
+    }
+    for (var m = 1; m < month; m++) {
+      day += getMonthDay(year, m)
+    }
+    day = (day + 1) % 7
+    return day
+  }
+</script>
